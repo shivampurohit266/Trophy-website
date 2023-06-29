@@ -13,11 +13,11 @@ const DatePicker = () => {
       <div className="flex justify-between">
         <div className="flex items-center gap-2">
           <h6 className="text-2xl font-medium">21 Days</h6>
-          <p className="text-darkGrey text-sm">1 bed • 1 bath</p>
+          <p className="text-sm text-darkGrey">1 bed • 1 bath</p>
         </div>
         <div>
           <div
-            className="flex border rounded-lg border-greyishBrown w-max cursor-pointer"
+            className="flex border rounded-lg cursor-pointer border-greyishBrown w-max"
             onClick={() => {
               setMoveIn(!moveIn);
             }}
@@ -40,7 +40,7 @@ const DatePicker = () => {
         </div>
       </div>
       <DateRangePicker
-        onChange={onChange}
+        onChange={(e: any) => onChange(e)}
         value={value}
         isOpen={true}
         format="dd MMM,y"
